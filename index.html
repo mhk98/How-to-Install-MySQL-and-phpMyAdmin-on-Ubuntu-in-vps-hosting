@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R9QKL8BBCC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R9QKL8BBCC');
+    </script>
+    <script async="" src="js/adsbygoogle.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>
+        How to Install MySQL and phpMyAdmin on Ubuntu 24.04    </title>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="/">
+            <div class="top-nav-item">absprog.com</div>
+        </a>
+    </nav>
+    <article class="main-container">
+        <h1>How to Install MySQL and phpMyAdmin on Ubuntu 24.04</h1>
+<p class="date-par">Last update: 05-22-2024</p>
+<iframe width="370" height="208" src="https://www.youtube.com/embed/R70p_gZZ_HI?si=PdBJxxHkPjgC_7Op" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<p>In this guide, we will walk you through the steps to install MySQL and phpMyAdmin on Ubuntu 24.04. MySQL is a powerful and widely-used database management system, while phpMyAdmin provides an intuitive web interface for managing MySQL databases. These tools are essential for developers and administrators looking to efficiently manage their data.</p>
+
+<h2>Step 1: Update Your System</h2>
+<p>First, update your package list to ensure you have the latest information about available packages:</p>
+<pre><code>sudo apt update</code></pre>
+
+<h2>Step 2: Preconfigure phpMyAdmin</h2>
+<p>Next, we'll preconfigure phpMyAdmin to use Apache as the web server:</p>
+<pre><code>echo "phpmyadmin phpmyadmin/dbconfig-install boolean false" | sudo debconf-set-selections
+echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | sudo debconf-set-selections</code></pre>
+
+<h2>Step 3: Install MySQL and phpMyAdmin</h2>
+<p>Now, install MySQL server, PHP, and phpMyAdmin:</p>
+<pre><code>sudo apt install php mysql-server phpmyadmin</code></pre>
+
+<h2>Step 4: Secure Your MySQL Installation</h2>
+<p>Run the following command to secure your MySQL installation. This step is crucial for ensuring your database is protected:</p>
+<pre><code>sudo mysql_secure_installation</code></pre>
+
+<h2>Step 5: Configure MySQL User Authentication</h2>
+<p>Log in to the MySQL shell as the root user:</p>
+<pre><code>sudo mysql</code></pre>
+<p>Then, alter the root user to use the mysql_native_password authentication method and set a new password:</p>
+<pre><code>alter user 'root'@'localhost' identified with mysql_native_password by 'P@55word';</code></pre>
+<p>Exit the MySQL shell:</p>
+<pre><code>exit</code></pre>
+
+<h2>Conclusion</h2>
+<p>You have now successfully installed MySQL and phpMyAdmin on your Ubuntu 24.04 server. MySQL offers robust performance and scalability, making it a preferred choice for many applications, while phpMyAdmin's user-friendly interface makes database management a breeze. Access phpMyAdmin by navigating to <code>http://your_server_ip/phpmyadmin</code> in your web browser. Use the MySQL root credentials to log in and start managing your databases efficiently.</p>
+    </article>
+    <div class="main-container">
+    <h2>0 Comments</h2>
+    
+    <h3>Add a new comment:</h3>
+    <form action="/comment" method="post">
+        <input type="hidden" name="_token" value="o9O4AA8rTWVQoU3Ss0EMzzcRztlM91kyLW2kdDz3" autocomplete="off">        <div><label for="name-input">Name:</label></div>
+        <div><input id="name-input" type="text" placeholder="your name" name="username"></div>
+        <div class="space-top"><label for="comment-tarea">Comment:</label></div>
+        <div><textarea id="comment-tarea" placeholder="your comment" name="comment_body" cols="50" rows="10"></textarea></div>
+        <input type="hidden" name="article_id" value="17">
+        <div><button type="submit">Send</button></div>
+    </form>
+
+    </div>
+
+
+</body></html>

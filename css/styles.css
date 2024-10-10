@@ -1,0 +1,82 @@
+body, html, p {
+    margin: 0;
+    padding: 0;
+}
+
+p, li {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 25px 5px 35px 0;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.top-nav {
+    background-color: blueviolet;
+}
+
+.top-nav-item {
+    padding: 15px;
+    max-width: 150px;
+}
+
+.top-nav-item:hover {
+    background-color: aquamarine;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.date-par {
+    color: gray;
+    font-size: 0.85rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.main-container {
+    padding: 10px;
+}
+
+pre {
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    overflow: auto;
+}
+
+.space-top {
+    margin-top: 10px;
+}
+
+@media screen and (min-width:600px) {
+    .main-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .main-container {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
